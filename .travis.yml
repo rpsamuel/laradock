@@ -49,7 +49,13 @@ deploy:
   on:
     branch: master
     condition: -n "${HUGO_VERSION}"
-
+deploy:
+  provider: heroku
+  api_key:"486ac3c0-a18b-4705-b036-dc82d67ab093"
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+    condition: -n "${HUGO_VERSION}"
 notifications:
 email: false
 ###
