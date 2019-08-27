@@ -42,9 +42,14 @@ before_install:
 
 script: ./travis-build.sh
 deploy:
-  provider: heroku
-  api_key:
-    secure: "486ac3c0-a18b-4705-b036-dc82d67ab093"
+  provider: pages
+  skip_cleanup: true
+  local_dir: docs
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+    condition: -n "${HUGO_VERSION}"
+
 notifications:
-  email: false
+email: false
 ###
