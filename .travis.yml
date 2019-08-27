@@ -41,8 +41,6 @@ before_install:
   - docker version
 
 script: ./travis-build.sh
-
-deploy:
 deploy:
   provider: heroku
   api_key:
