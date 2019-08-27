@@ -45,7 +45,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   local_dir: docs
-  github_token: "af03ce59f8188684da8b16cf5da3a9556aa7feb6"
+  github_token: "e557167443c79087a8ce8f15982a8e431801319b"
   on:
     branch: master
     condition: -n "${HUGO_VERSION}"
